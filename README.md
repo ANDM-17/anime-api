@@ -36,7 +36,7 @@ let TopAnime =  new Anime.TopPages({
 
 ```js
 client.on("message", async function(message){
-    if(message.content.startsWith("top")){ //
+    if(message.content.startsWith("top")){ 
         let args = message.content.split(" ")
         let TopAnime = new Anime.TopPages({
               messageType : "embed" ,
@@ -44,6 +44,27 @@ client.on("message", async function(message){
               ReplyMessage : true, 
               color : "#3e6deb" , 
               TopAnimes: 23, 
+              Pages : Number(args[1]),
+            })
+        return TopAnime.top(message);
+    }
+})
+```
+
+<div align="center">
+  <img src="https://cdn.discordapp.com/attachments/863796420996890645/863802878220566538/unknown.png">
+  <br> <br>
+</div>
+```js
+client.on("message", async function(message){
+    if(message.content.startsWith("top")){ //
+        let args = message.content.split(" ")
+        let TopAnime = new Anime.TopPages({
+              messageType : "embed" ,
+              Client : client ,
+              ReplyMessage : false, 
+              color : "#3e6deb" , 
+              TopAnimes: 50, 
               Pages : Number(args[1]),
             })
         return TopAnime.top(message);
