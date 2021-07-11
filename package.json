@@ -1,0 +1,35 @@
+{
+  "name": "anime-api",
+  "version": "1.0.0",
+  "description": "anime-api",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ANDM-17/anime-api.git"
+  },
+  "keywords": [
+    "anime",
+    "api",
+    "top",
+    "animes",
+    "top-anime",
+    "animes-tops",
+    "tops-anime",
+    "anime-tops"
+  ],
+  "author": "ANDM-17",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ANDM-17/anime-api/issues"
+  },
+  "homepage": "https://github.com/ANDM-17/anime-api#readme",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.10",
+    "discord-reply": "^0.1.2",
+    "discord.js": "^12.5.3",
+    "node-fetch": "^2.6.1"
+  }
+}
