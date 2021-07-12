@@ -94,7 +94,6 @@ class TopPages {
         .setColor(embedColor)
         .setDescription(topContent)
         if(NowPage == 0){
-            console.log("ok")
         embed.setFooter("Pages "+'??'+"/"+MaxPages+"");
         } else {
         embed.setFooter("Pages "+NowPage+"/"+MaxPages+"");
