@@ -1,6 +1,6 @@
 {
   "name": "anime-api",
-  "version": "1.0.4",
+  "version": "1.1.0",
   "description": "Discord Anime Api Top 10 Animes And More With more features in upcoming updates",
   "main": "index.js",
   "scripts": {
@@ -18,7 +18,9 @@
     "top-anime",
     "animes-tops",
     "tops-anime",
-    "anime-tops"
+    "anime-tops",
+    "discord",
+    "discord-anime"
   ],
   "author": "ANDM-17",
   "license": "ISC",
@@ -28,6 +30,7 @@
   "homepage": "https://github.com/ANDM-17/anime-api#readme",
   "dependencies": {
     "cheerio": "^1.0.0-rc.10",
+    "discord-buttons": "^4.0.0",
     "discord-reply": "^0.1.2",
     "discord.js": "^12.5.3",
     "node-fetch": "^2.6.1"
