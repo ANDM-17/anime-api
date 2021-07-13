@@ -15,7 +15,7 @@
 npm install anime-api
 ```
 
-## Setup 
+## Pages Setup :
 ```js
 const Anime = require("anime-api");
 const Discord = require("discord.js");
@@ -32,9 +32,61 @@ let TopAnime =  new Anime.TopPages({
               Pages : 1 , // Page Number every 10 Animes +1 one Page //Not Required
               ErrorMessage : "Not Found", // default This Page Is Not Found 🙂//Not Required
             });
+  
+```
+
+## Top With Discord Button Setup :
+
+```js
+const Anime = require("anime-api");
+const Discord = require("discord.js");
+const client = new Discord.Client();
+const disbut = require('discord-buttons');
+disbut(client);
+
+
+client.on("message", async function(message){
+    if(message.content.startsWith("topButtons")){ //
+        let args = message.content.split(" ")
+        let TopAnime = new Anime.TopPages({
+              Client : client,// Discord Client // Required
+              color : "#3e6deb", // Color default black //Not Required
+              TopAnimes: 50,// Top 10 Anime limit is 50 //Not Required
+              Content : "Top 50 \n[top]",// default Top 10 Animes \n [top] //Not Required
+              buttonsTimeout : 100000,//buttons Timeout  default is 100000ms//Not Required
+              Pages : Number(args[1]),// Page Number every 10 Animes +1 one Page //Not Required
+            })
+        return TopAnime.ButtonsPages(client , message , '<' , ">").catch(err => {throw err});
+    }
+});
 ```
 
 ## Examples 
+
+Top with Moved Buttons : 
+<div align="center">
+  <img src="https://cdn.discordapp.com/attachments/864207573463597108/864582522243252224/unknown.png">
+  <br> <br>
+</div>
+
+```js
+const disbut = require('discord-buttons');
+disbut(client);
+
+client.on("message", async function(message){
+    if(message.content.startsWith("topButtons")){ //
+        let args = message.content.split(" ")
+        let TopAnime = new Anime.TopPages({
+              Client : client,
+              color : "#3e6deb", 
+              TopAnimes: 50,
+              buttonsTimeout : 100000,
+              Pages : Number(args[1]),
+            })
+        return TopAnime.ButtonsPages(client , message , '<' , ">").catch(err => {throw err});
+    }
+});
+```
 
 <div align="center">
   <img src="https://cdn.discordapp.com/attachments/863796420996890645/863802146645868544/Screenshot_31.png">
