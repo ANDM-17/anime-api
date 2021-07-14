@@ -1,6 +1,6 @@
 {
   "name": "anime-api",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Discord Anime Api Top 10 Animes And More With more features in upcoming updates",
   "main": "index.js",
   "scripts": {
