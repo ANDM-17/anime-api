@@ -88,6 +88,25 @@ client.on("message", async function(message){
 });
 ```
 
+## Data Top Animes :
+
+<div align="center">
+<img src="https://cdn.discordapp.com/attachments/864207573463597108/864787097105727488/unknown.png">
+ <br> <br>
+</div>
+
+```js
+const Anime = require("anime-api");
+
+
+async function Data() {
+    let data = await Anime.TopData(10)// The number required to collect ِTop Anime //The maximum is 50;
+    console.log(data)
+}
+
+Data()
+```
+
 <div align="center">
   <img src="https://cdn.discordapp.com/attachments/863796420996890645/863802146645868544/Screenshot_31.png">
   <br> <br>
