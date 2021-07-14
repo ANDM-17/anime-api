@@ -1,4 +1,4 @@
-const Top = require("./Top");
+const {Top} = require("./Top");
 const Discord = require("discord.js");
 let Type = ["message", "embed"];
 require("discord-reply");
