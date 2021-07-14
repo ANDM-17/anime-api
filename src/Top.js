@@ -15,5 +15,19 @@ const Discord = require("discord.js");
         })
         return dataa;
         }
+        async function Data(resultslimt){
+            let fetched = await fetch(URl , {core : 'no-core'});
+            let data = await fetched.text();
+            let $ = await cheerio.load(data);
+            let dataa = [];
+           await $('.detail h3').each((i , el) => {
+               if(i > resultslimt)return;
+                const itt = $(el).text();
+                dataa.push(itt);
+            })
+            return dataa;
+            }
 
-module.exports = Top;
+
+module.exports = Data;
+module.exports.Top = Top;
