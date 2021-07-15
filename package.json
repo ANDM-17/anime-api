@@ -1,6 +1,6 @@
 {
   "name": "anime-api",
-  "version": "1.1.1",
+  "version": "1.1.5",
   "description": "Discord Anime Api Top 10 Animes And More With more features in upcoming updates",
   "main": "index.js",
   "scripts": {
@@ -20,7 +20,11 @@
     "tops-anime",
     "anime-tops",
     "discord",
-    "discord-anime"
+    "discord-anime",
+    "random",
+    "random-anime-tenor",
+    "anime-tenor",
+    "gif"
   ],
   "author": "ANDM-17",
   "license": "ISC",
