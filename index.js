@@ -1,4 +1,4 @@
-let version = require('./package.json').version;
+let version = require('./package.json').version;//version
 
 
 
