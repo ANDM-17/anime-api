@@ -143,7 +143,7 @@ const RandomGifs =  new Anime.Random();
 
 client.on("message", async (message) => {
     if(message.content.startsWith("random")){ 
-     let random = await Random.randomSadGif();
+     let random = await RandomGifs.randomSadGif();
         message.channel.send(random)
     }
 })
@@ -162,7 +162,7 @@ const RandomGifs =  new Anime.Random();
 client.on("message", async(message) => {
     if(message.content.startsWith("random")){ 
      let args = message.content.split(" ").slice(1).join(" ")
-     let random = await Random.findRandomGif(args);
+     let random = await RandomGifs.findRandomGif(args);
      if(random){
         message.channel.send(random)
      } else {
