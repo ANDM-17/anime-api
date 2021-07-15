@@ -128,7 +128,50 @@ client.on("message", async function(message){
     }
 })
 ```
+## Random Anime Gifs  Form tenor.com
 
+<div align="center">
+  <img src="https://cdn.discordapp.com/attachments/863796420996890645/865267322649444372/unknown.png">
+  <br> <br>
+</div>
+
+```js
+
+/// Random Sad Anime Gifs Form tenor.com
+const Anime = require("anime-api");
+const RandomGifs =  new Anime.Random();
+
+client.on("message", async (message) => {
+    if(message.content.startsWith("random")){ 
+     let random = await Random.randomSadGif();
+        message.channel.send(random)
+    }
+})
+```
+
+<div align="center">
+  <img src="https://cdn.discordapp.com/attachments/863796420996890645/865266835750780938/unknown.png">
+  <br> <br>
+</div>
+
+```js
+/// Find Anime Random Gifs Form tenor.com
+const Anime = require("anime-api");
+const RandomGifs =  new Anime.Random();
+
+client.on("message", async(message) => {
+    if(message.content.startsWith("random")){ 
+     let args = message.content.split(" ").slice(1).join(" ")
+     let random = await Random.findRandomGif(args);
+     if(random){
+        message.channel.send(random)
+     } else {
+         message.channel.send("Not Found")
+     }
+    }
+})
+
+```
 <div align="center">
   <img src="https://cdn.discordapp.com/attachments/863796420996890645/863802878220566538/unknown.png">
   <br> <br>
